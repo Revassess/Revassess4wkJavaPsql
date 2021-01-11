@@ -1,0 +1,11 @@
+com\revature\dao\UserRepository.class
+com\revature\model\Flashcard.class
+com\revature\model\User.class
+com\revature\config\ConnectionUtil.class
+com\revature\exception\ResourcePersistenceException.class
+com\revature\dao\FlashcardRepository.class
+com\revature\model\Category.class
+com\revature\servlet\RevassessServlet.class
+com\revature\dao\CrudRepository.class
+com\revature\exception\ResourceNotfoundException.class
+com\revature\model\Role.class
