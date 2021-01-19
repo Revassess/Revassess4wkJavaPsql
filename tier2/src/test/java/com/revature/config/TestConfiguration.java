@@ -22,8 +22,11 @@ public class TestConfiguration {
     private static SessionFactory buildFactory() throws IOException {
         Properties props = new Properties();
         props.load(new FileInputStream(new File("src/sql/setup.properties")));
-        return new Configuration().addProperties(props)
-                .setProperty("hibernate.connection.driver_class", findDriver(props))
+        return new Configuration()
+        		.setProperty("hibernate.connection.url","jdbc:postgresql://localhost:5432/revassess_test")
+        		.setProperty("hibernate.connection.username", "tester")
+        		.setProperty("hibernate.connection.password", "password")
+                .setProperty("hibernate.connection.driver_class", "org.postgresql.Driver")
                 .setProperty("hibernate.connection.pool_size", "1")
                 .setProperty("hibernate.connection.isolation", String.valueOf(Connection.TRANSACTION_SERIALIZABLE))
                 .setProperty("hibernate.hbm2ddl.auto", "none").setProperty("hibernate.show_sql", "true")
@@ -42,6 +45,7 @@ public class TestConfiguration {
         return sesfact;
     }
 
+    @Deprecated
     private static String findDriver(Properties props) {
         engine = props.getProperty("database.engine");
         switch (engine) {

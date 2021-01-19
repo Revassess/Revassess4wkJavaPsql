@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.revature.tier2.Answer1Tests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 14.281 s <<< FAILURE! - in com.revature.tier2.Answer1Tests
+basicUserTest  Time elapsed: 14.275 s  <<< ERROR!
+javax.persistence.PersistenceException: org.hibernate.exception.GenericJDBCException: could not extract ResultSet
+	at com.revature.tier2.Answer1Tests.basicUserTest(Answer1Tests.java:42)
+Caused by: org.hibernate.exception.GenericJDBCException: could not extract ResultSet
+	at com.revature.tier2.Answer1Tests.basicUserTest(Answer1Tests.java:42)
+Caused by: org.postgresql.util.PSQLException: No results were returned by the query.
+	at com.revature.tier2.Answer1Tests.basicUserTest(Answer1Tests.java:42)
+

@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.revature.tier2.Answer4Tests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.062 s <<< FAILURE! - in com.revature.tier2.Answer4Tests
+JoinTest  Time elapsed: 0.058 s  <<< ERROR!
+javax.persistence.PersistenceException: org.hibernate.exception.GenericJDBCException: could not extract ResultSet
+	at com.revature.tier2.Answer4Tests.JoinTest(Answer4Tests.java:43)
+Caused by: org.hibernate.exception.GenericJDBCException: could not extract ResultSet
+	at com.revature.tier2.Answer4Tests.JoinTest(Answer4Tests.java:43)
+Caused by: org.postgresql.util.PSQLException: No results were returned by the query.
+	at com.revature.tier2.Answer4Tests.JoinTest(Answer4Tests.java:43)
+
