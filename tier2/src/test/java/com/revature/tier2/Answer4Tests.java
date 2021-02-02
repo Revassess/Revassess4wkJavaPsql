@@ -30,7 +30,7 @@ public class Answer4Tests {
     @BeforeEach
     public void setup() {
         try {
-            answer4Contents = getSQLFileContents("answer4").replace(';', ' ');
+            answer4Contents = getSQLFileContents("answer4");
         } catch (IOException e) {
             e.printStackTrace();
         }

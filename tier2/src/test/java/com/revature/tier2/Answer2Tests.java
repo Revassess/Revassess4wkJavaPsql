@@ -28,7 +28,7 @@ public class Answer2Tests {
     @BeforeEach
     public void setup() {
         try {
-            answer2Contents = getSQLFileContents("answer2").replace(';', ' ');
+            answer2Contents = getSQLFileContents("answer2");
         } catch (IOException e) {
             e.printStackTrace();
         }

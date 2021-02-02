@@ -23,7 +23,7 @@ public class UserStudySet {
     @Column(name = "last_name", nullable = false)
     private String lastName;
     @Column(name = "role_id")
-    private int roleId;
+    private Role roleId;
     @Column(name="study_set_id")
     private int studySetId;
     private String name;
@@ -32,7 +32,7 @@ public class UserStudySet {
     public UserStudySet() {
     }
 
-    public UserStudySet(final String username, final String password, final String firstName, final String lastName, final int roleId, final int study_set_id, final String name) {
+    public UserStudySet(final String username, final String password, final String firstName, final String lastName, final Role roleId, final int study_set_id, final String name) {
         this.username = username;
         this.password = password;
         this.firstName = firstName;
@@ -82,11 +82,11 @@ public class UserStudySet {
         this.lastName = lastName;
     }
 
-    public int getRoleId() {
+    public Role getRoleId() {
         return this.roleId;
     }
 
-    public void setRoleId(final int roleId) {
+    public void setRoleId(final Role roleId) {
         this.roleId = roleId;
     }
 

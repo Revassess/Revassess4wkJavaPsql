@@ -23,7 +23,7 @@
     - Value: 20 points
 
 
-  - Write a query that will find all user and study set info related to the user with an id of 5
+  - Write a query that will find all user and study set info related to the user with a user id of 5
     - Value: 30 points
 	
 

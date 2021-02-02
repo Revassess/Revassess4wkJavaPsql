@@ -27,7 +27,7 @@ public class Answer3Tests {
     @BeforeEach
     public void setup() {
         try {
-            answer3Contents = getSQLFileContents("answer3").replace(';', ' ');
+            answer3Contents = getSQLFileContents("answer3");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -39,7 +39,9 @@ public class Answer3Tests {
         Transaction tx = sess.beginTransaction();
         try {
             List<UserStudySet> users = sess.createNativeQuery(answer3Contents, UserStudySet.class).list();
+            System.out.println(users);
             assertEquals(3, users.size());
+            assertEquals(4,users.get(0).getRoleId().getRole_id());
         } finally {
             tx.rollback();
         }
