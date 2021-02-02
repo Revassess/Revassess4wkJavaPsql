@@ -38,11 +38,14 @@ public class Answer4Tests {
 
     @RevaTest(tier = 2, points = 40)
     public void JoinTest() {
-        try (Session sess = TestConfiguration.getSessionFactory().openSession()) {
-            Transaction tx = sess.beginTransaction();
+        Session sess = TestConfiguration.getSessionFactory().openSession();
+        Transaction tx = sess.beginTransaction();
+        try {
             List<UserProblem4> users = sess.createNativeQuery(answer4Contents, UserProblem4.class).list();
             assertEquals(9, users.size());
+        } finally {
             tx.rollback();
+
         }
     }
 

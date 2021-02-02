@@ -35,12 +35,13 @@ public class Answer3Tests {
 
     @RevaTest(tier = 2, points = 30)
     public void userAndStudySetTest() {
-        try (Session sess = TestConfiguration.getSessionFactory().openSession()) {
-            Transaction tx = sess.beginTransaction();
+        Session sess = TestConfiguration.getSessionFactory().openSession();
+        Transaction tx = sess.beginTransaction();
+        try {
             List<UserStudySet> users = sess.createNativeQuery(answer3Contents, UserStudySet.class).list();
             assertEquals(3, users.size());
+        } finally {
             tx.rollback();
         }
     }
-
 }

@@ -10,6 +10,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 import static com.revature.tier2.config.TestConfiguration.getSQLFileContents;
@@ -35,13 +36,15 @@ public class Answer2Tests {
 
     @RevaTest(tier = 2, points = 20)
     public void insertPremUserTest() {
-        try (Session sess = TestConfiguration.getSessionFactory().openSession()) {
-            Transaction tx = sess.beginTransaction();
-            List<User> after, before;
+        Session sess = TestConfiguration.getSessionFactory().openSession();
+        Transaction tx = sess.beginTransaction();
+        List<User> after, before;
+        try {
             before = sess.createQuery("from User where roleId=4", User.class).list();
             sess.createNativeQuery(answer2Contents, User.class).executeUpdate();
             after = sess.createQuery("from User where roleId=4", User.class).list();
             assertEquals(after.size(), before.size() + 1);
+        } finally {
             tx.rollback();
         }
     }

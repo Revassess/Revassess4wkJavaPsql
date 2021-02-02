@@ -36,16 +36,18 @@ public class Answer1Tests {
 
     @RevaTest(tier = 2, points = 10)
     public void basicUserTest() {
-        try (Session sess = TestConfiguration.getSessionFactory().openSession()) {
+        Session sess = TestConfiguration.getSessionFactory().openSession();
             Transaction tx = sess.beginTransaction();
+
+        try{
             List<User> users = sess.createNativeQuery(answer1Contents, User.class).list();
-            System.out.println(users.get(0));
             assertEquals(1, users.size());
             assertEquals(3, users.get(0).getUserRole().getRole_id());
             assertEquals("Jason", users.get(0).getFirstName());
             assertEquals("Knighten", users.get(0).getLastName());
             assertEquals("knifehand", users.get(0).getPassword());
             assertEquals("mknighten", users.get(0).getUsername());
+        }finally {
             tx.rollback();
         }
     }
