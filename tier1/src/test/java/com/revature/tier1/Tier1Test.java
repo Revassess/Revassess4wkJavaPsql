@@ -6,10 +6,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(JUnitPlatform.class)
 @SelectClasses({
-    Answer1Tests.class,
-    Answer2Tests.class,
-    Answer3Tests.class,
-    Answer4Tests.class,
+        CompareStrings.class,
+        User.class,
+        SumOverArrayTests.class,
+        ConstructorOverloadingTests.class
 })
 public class Tier1Test {
 

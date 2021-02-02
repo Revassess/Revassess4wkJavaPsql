@@ -11,21 +11,21 @@
 
 **Description/Setup:**
   - User class diagram: [here](https://revature-note-assets.s3.amazonaws.com/quizzard-class-diagram-tier-1.png)
-  - Push code to the branch on repo to be notified by email provided on master branch.
+  - Further instructions for each problem can be found in the classes located in src/main/java
 
 **Problem Set:**
-  - Create a method that checks if two strings are equal and return the boolean result.
+  - Implement the CompareStrings method in the com.revature.tier1.CompareStrings class to properly compare the equality of two Strings
     - Value: 10 points
 
 
-  - Implement a POJO using the provided UML class model
+  - Implement a POJO for the com.revature.tier1.User class using the provided UML class model located in the description section of the README
     - Value: 20 points
 
 
-  - Create a method that iterates over an integer array and returns their sum.
+  - Implement the iterateAndSum method located in the com.revature.tier1.SumOverArray class so that it properly iterates over the array and sums the integers.
     - Value: 30 points
 	
 
-  - Create a method that, given an integer, can raise each digit to the power of the overall length and return whether the sum of the powers is equal to the original integer.
+  - Create overloaded constructors in the com.revature.tier1.Person class to provide the behavior as described in that class.
     - Value: 40 points
 
