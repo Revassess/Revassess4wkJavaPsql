@@ -1,14 +1,14 @@
 package com.revature.tier2;
 
-import static com.revature.config.TestConfiguration.getFileContents;
+import static com.revature.tier2.config.TestConfiguration.getSQLFileContents;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.IOException;
 import java.util.List;
 
-import com.revature.config.TestConfiguration;
-import com.revature.tier2.model.UserProblem4;
 
+import com.revature.tier2.config.TestConfiguration;
+import com.revature.tier2.model.UserProblem4;
 import dev.ranieri.assesors.RevAssess;
 import dev.ranieri.assesors.RevaTest;
 
@@ -30,7 +30,7 @@ public class Answer4Tests {
     @BeforeEach
     public void setup() {
         try {
-            answer4Contents = getFileContents("answer4").replace(';', ' ');
+            answer4Contents = getSQLFileContents("answer4").replace(';', ' ');
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -12,8 +12,7 @@
 **Description/Setup:**
   - ERD: [Quizzard Entity Relationship Diagram](https://revature-note-assets.s3.amazonaws.com/quizzard-erd.png)
   - Using the provided ERD, create a single query that satisfies the task
-  - Personalized DB user credentials will be provided to connect with IDE for script creation
-  - Push script file to personal branch to proceed to Tier 3
+  - Use the sql files located in src/sql to paste your queries in for the tests to run.
 
 **Problem Set:**
   - Write a query that will find all user info related to users with a role of BASIC_USER

@@ -1,26 +1,23 @@
 package com.revature.tier2;
 
-import static com.revature.config.TestConfiguration.getFileContents;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import java.io.IOException;
-import java.util.List;
-
-import com.revature.config.TestConfiguration;
+import com.revature.tier2.config.TestConfiguration;
 import com.revature.tier2.model.User;
-
 import dev.ranieri.assesors.RevAssess;
 import dev.ranieri.assesors.RevaTest;
-
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 
+import java.io.IOException;
+import java.util.List;
+
+import static com.revature.tier2.config.TestConfiguration.getSQLFileContents;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 /**
  * prompt: Write a statement that will insert a new user into the APP_user table
  * with a role of PREMIUM_user
- * 
  */
 @ExtendWith(RevAssess.class)
 public class Answer2Tests {
@@ -30,7 +27,7 @@ public class Answer2Tests {
     @BeforeEach
     public void setup() {
         try {
-            answer2Contents = getFileContents("answer2").replace(';', ' ');
+            answer2Contents = getSQLFileContents("answer2").replace(';', ' ');
         } catch (IOException e) {
             e.printStackTrace();
         }
