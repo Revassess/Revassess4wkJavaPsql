@@ -21,7 +21,7 @@ public class User {
     private String lastName;
     @Enumerated
     @Column(name = "role_id", columnDefinition = "integer")
-    private Role roleId;
+    private Role role;
 
 
     public User() {
@@ -33,7 +33,7 @@ public class User {
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.roleId = userRole;
+        this.role = userRole;
     }
 
     public int getId() {
@@ -77,11 +77,11 @@ public class User {
     }
 
     public Role getUserRole() {
-        return this.roleId;
+        return this.role;
     }
 
     public void setUserRole(Role userRole) {
-        this.roleId = userRole;
+        this.role = userRole;
     }
 
     public User id(int id) {
@@ -110,7 +110,7 @@ public class User {
     }
 
     public User userRole(Role userRole) {
-        this.roleId = userRole;
+        this.role = userRole;
         return this;
     }
 
@@ -122,12 +122,12 @@ public class User {
             return false;
         }
         User user = (User) o;
-        return id == user.id && Objects.equals(username, user.username) && Objects.equals(password, user.password) && Objects.equals(firstName, user.firstName) && Objects.equals(lastName, user.lastName) && Objects.equals(roleId, user.roleId);
+        return id == user.id && Objects.equals(username, user.username) && Objects.equals(password, user.password) && Objects.equals(firstName, user.firstName) && Objects.equals(lastName, user.lastName) && Objects.equals(role, user.role);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, username, password, firstName, lastName, roleId);
+        return Objects.hash(id, username, password, firstName, lastName, role);
     }
 
     @Override

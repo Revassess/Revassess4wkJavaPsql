@@ -14,6 +14,7 @@ import java.util.List;
 
 import static com.revature.tier2.config.TestConfiguration.getSQLFileContents;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 /**
  * prompt: Write a query that will find all user info related to users with a
@@ -29,7 +30,7 @@ public class Answer1Tests {
         try {
             answer1Contents = getSQLFileContents("answer1");
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Could not find file: src/sql/answer1.sql");
         }
     }
 
@@ -38,7 +39,9 @@ public class Answer1Tests {
     public void basicUserTest() {
         Session sess = TestConfiguration.getSessionFactory().openSession();
             Transaction tx = sess.beginTransaction();
-
+        if(answer1Contents == null){
+            fail("File Not Found: src/sql/answer1.sql");
+        }
         try{
             List<User> users = sess.createNativeQuery(answer1Contents, User.class).list();
             assertEquals(1, users.size());

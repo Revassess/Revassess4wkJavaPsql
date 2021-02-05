@@ -12,7 +12,7 @@
 **Description/Setup:**
   - ERD: [Quizzard Entity Relationship Diagram](https://revature-note-assets.s3.amazonaws.com/quizzard-erd.png)
   - Using the provided ERD, create a single query that satisfies the task
-  - Use the sql files located in src/sql to paste your queries in for the tests to run.
+  - Use the sql files located in **src/sql** to paste your queries in for the tests to run.
 
 **Problem Set:**
   - Write a query that will find all user info related to users with a role of BASIC_USER
@@ -27,7 +27,7 @@
     - Value: 30 points
 	
 
-  - Write a query that returns the user's username and the category's name, questions and answers of flashcards that are owned by the user who is associated with the React study set
+  - Write a query that finds all question 1 flashcards from the flashcard table
     - Value: 40 points
 
 

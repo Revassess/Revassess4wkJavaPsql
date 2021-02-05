@@ -2,11 +2,7 @@ package com.revature.tier2.model;
 
 import java.util.Objects;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class UserStudySet {
@@ -22,8 +18,9 @@ public class UserStudySet {
     private String firstName;
     @Column(name = "last_name", nullable = false)
     private String lastName;
-    @Column(name = "role_id")
-    private Role roleId;
+    @Enumerated
+    @Column(name = "role_id", columnDefinition = "integer")
+    private Role role;
     @Column(name="study_set_id")
     private int studySetId;
     private String name;
@@ -32,12 +29,12 @@ public class UserStudySet {
     public UserStudySet() {
     }
 
-    public UserStudySet(final String username, final String password, final String firstName, final String lastName, final Role roleId, final int study_set_id, final String name) {
+    public UserStudySet(final String username, final String password, final String firstName, final String lastName, final Role role, final int study_set_id, final String name) {
         this.username = username;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.roleId = roleId;
+        this.role = role;
         this.studySetId = study_set_id;
         this.name = name;
     }
@@ -82,12 +79,12 @@ public class UserStudySet {
         this.lastName = lastName;
     }
 
-    public Role getRoleId() {
-        return this.roleId;
+    public Role getRole() {
+        return this.role;
     }
 
-    public void setRoleId(final Role roleId) {
-        this.roleId = roleId;
+    public void setRole(final Role role) {
+        this.role = role;
     }
 
     public int getStudySetId() {
@@ -114,12 +111,12 @@ public class UserStudySet {
             return false;
         }
         final UserStudySet userStudySet = (UserStudySet) o;
-        return id == userStudySet.id && Objects.equals(username, userStudySet.username) && Objects.equals(password, userStudySet.password) && Objects.equals(firstName, userStudySet.firstName) && Objects.equals(lastName, userStudySet.lastName) && roleId == userStudySet.roleId && studySetId == userStudySet.studySetId && Objects.equals(name, userStudySet.name);
+        return id == userStudySet.id && Objects.equals(username, userStudySet.username) && Objects.equals(password, userStudySet.password) && Objects.equals(firstName, userStudySet.firstName) && Objects.equals(lastName, userStudySet.lastName) && role == userStudySet.role && studySetId == userStudySet.studySetId && Objects.equals(name, userStudySet.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, username, password, firstName, lastName, roleId, studySetId, name);
+        return Objects.hash(id, username, password, firstName, lastName, role, studySetId, name);
     }
 
     @Override
@@ -130,12 +127,12 @@ public class UserStudySet {
             ", password='" + getPassword() + "'" +
             ", firstName='" + getFirstName() + "'" +
             ", lastName='" + getLastName() + "'" +
-            ", roleId='" + getRoleId() + "'" +
+            ", roleId='" + getRole() + "'" +
             ", study_set_id='" + getStudySetId() + "'" +
             ", name='" + getName() + "'" +
             "}";
     }
-   
+
 
     
 }

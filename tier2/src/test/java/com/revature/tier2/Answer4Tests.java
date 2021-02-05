@@ -1,14 +1,15 @@
 package com.revature.tier2;
 
 import static com.revature.tier2.config.TestConfiguration.getSQLFileContents;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.regex.Matcher;
 
 
 import com.revature.tier2.config.TestConfiguration;
-import com.revature.tier2.model.UserProblem4;
+import com.revature.tier2.model.Flashcard;
 import dev.ranieri.assesors.RevAssess;
 import dev.ranieri.assesors.RevaTest;
 
@@ -32,7 +33,7 @@ public class Answer4Tests {
         try {
             answer4Contents = getSQLFileContents("answer4");
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Could not find file: src/sql/answer4.sql");
         }
     }
 
@@ -40,10 +41,16 @@ public class Answer4Tests {
     public void JoinTest() {
         Session sess = TestConfiguration.getSessionFactory().openSession();
         Transaction tx = sess.beginTransaction();
+        if (answer4Contents == null) {
+            fail("File Not Found: src/sql/answer4.sql");
+        }
         try {
-            List<UserProblem4> users = sess.createNativeQuery(answer4Contents, UserProblem4.class).list();
-            assertEquals(9, users.size());
+            List<Flashcard> questions = sess.createNativeQuery(answer4Contents, Flashcard.class).list();
+
+            assertEquals(12, questions.size(), "The query did not provide the expected result.");
+            questions.forEach(flashcard -> assertTrue(flashcard.getQuestion().matches(".*Question 1.*"),"The questions do not meet the format"));
         } finally {
+
             tx.rollback();
 
         }

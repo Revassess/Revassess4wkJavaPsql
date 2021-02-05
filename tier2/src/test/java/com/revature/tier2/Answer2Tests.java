@@ -15,6 +15,7 @@ import java.util.List;
 
 import static com.revature.tier2.config.TestConfiguration.getSQLFileContents;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 /**
  * prompt: Write a statement that will insert a new user into the APP_user table
@@ -30,7 +31,7 @@ public class Answer2Tests {
         try {
             answer2Contents = getSQLFileContents("answer2");
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Could not find file: src/sql/answer2.sql");
         }
     }
 
@@ -39,6 +40,9 @@ public class Answer2Tests {
         Session sess = TestConfiguration.getSessionFactory().openSession();
         Transaction tx = sess.beginTransaction();
         List<User> after, before;
+        if(answer2Contents == null){
+            fail("File Not Found: src/sql/answer2.sql");
+        }
         try {
             before = sess.createQuery("from User where roleId=4", User.class).list();
             sess.createNativeQuery(answer2Contents, User.class).executeUpdate();
