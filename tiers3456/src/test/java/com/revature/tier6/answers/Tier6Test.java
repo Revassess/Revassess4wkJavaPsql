@@ -6,9 +6,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(JUnitPlatform.class)
 @SelectClasses({
-    Answer1Tests.class,
-    Answer2Tests.class,
-    Answer3Tests.class,
+    WelcomeFileTests.class,
+    ServletTests.class,
+    RegisterWithTomcatTests.class,
 })
 public class Tier6Test {
 

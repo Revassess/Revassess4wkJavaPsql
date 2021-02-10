@@ -1,9 +1,14 @@
 package com.revature.config;
 
-import java.sql.Connection;
-
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+
+import java.sql.Connection;
+import java.util.Enumeration;
+import java.util.Optional;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 public class TestConfig{
     

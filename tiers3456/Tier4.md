@@ -11,20 +11,13 @@
 **Description/Setup:**
   - This Tier will test the associate’s ability to connect a Java application to the database that was constructed in Tier 3 using JDBC.
   - App Class Diagram: [Quizzard Class Diagram (Tier 4)](https://revature-note-assets.s3.amazonaws.com/quizzard-class-diagram-tier-4.png)
-  - Dummy data script: 
-    - Oracle: [Quizzard Dummy Data Script](https://revature-note-assets.s3.amazonaws.com/quizzard-dummy-data.sql)
-    -PostgreSQL: [Quizzard Dummy Data Script](https://example-for-java-curriculum.s3.amazonaws.com/dummy_data.sql)
 
 **Problem Set:**
-  - Establish a connection to a deployed database using the provided ConnectionUtil class.
+  - Use the connect method inside the com.revature.config.ConnectionUtil class to open a connection to your database. 
     - Value: 10 points
-    
-  - implement the ConnectionUtil class's callAbsoluteValueFunction method with a callable statement to call the absolute value scalar function.
-    - Value: 20 Points
-    
-  - Implement only the `CrudRepository` interface methods within `UserRepository` class using the provided class diagram given above in the setup section.
-    - Value: 30 point
 
   - Implement the entire class structure indicated in the provided class diagram, method stubs are fine to be left unimplemented.
-    - Value: 40 points
-
+    - Value: 20 Points
+    
+  - Provide an implementation to the findById method in the UserRepository to return a User by their ID.
+    - Value: 30 point
