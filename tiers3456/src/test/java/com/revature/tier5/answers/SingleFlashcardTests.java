@@ -11,6 +11,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.revature.assessors.RevAssess;
+import com.revature.assessors.RevaTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.By;
@@ -21,8 +23,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import dev.ranieri.assesors.RevAssess;
-import dev.ranieri.assesors.RevaTest;
 
 /**
  * prompt: Dynamically render a flashcard's information obtained from the

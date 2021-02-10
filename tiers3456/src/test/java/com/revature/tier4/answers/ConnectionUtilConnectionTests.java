@@ -7,13 +7,13 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 import java.sql.SQLException;
 
+import com.revature.assessors.RevAssess;
+import com.revature.assessors.RevaTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import com.revature.config.ConnectionUtil;
 
-import dev.ranieri.assesors.RevAssess;
-import dev.ranieri.assesors.RevaTest;
 
 /**
  * prompt: Establish a connection to a deployed database using JDBC.

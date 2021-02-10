@@ -1,9 +1,9 @@
 package com.revature.tier1;
 
+import com.revature.assessors.RevAssess;
+import com.revature.assessors.RevaTest;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import dev.ranieri.assesors.RevAssess;
-import dev.ranieri.assesors.RevaTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 

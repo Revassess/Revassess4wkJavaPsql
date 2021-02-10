@@ -1,13 +1,9 @@
 package com.revature.tier3.answers;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
+import com.revature.assessors.RevAssess;
+import com.revature.assessors.RevaTest;
+import com.revature.config.ConnectionUtil;
+import com.revature.config.TestConfig;
 import org.hibernate.dialect.Dialect;
 import org.hibernate.engine.jdbc.dialect.internal.StandardDialectResolver;
 import org.hibernate.engine.jdbc.dialect.spi.DatabaseMetaDataDialectResolutionInfoAdapter;
@@ -15,11 +11,13 @@ import org.hibernate.engine.jdbc.dialect.spi.DialectResolver;
 import org.hibernate.jdbc.ReturningWork;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import com.revature.config.ConnectionUtil;
-import com.revature.config.TestConfig;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
-import dev.ranieri.assesors.RevAssess;
-import dev.ranieri.assesors.RevaTest;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
+
 
 /**
  * prompt: 

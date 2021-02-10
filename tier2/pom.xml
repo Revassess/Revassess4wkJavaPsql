@@ -26,12 +26,12 @@
 			<version>1.7.0</version>
 		</dependency>
 		<dependency>
-			<groupId>dev.ranieri</groupId>
-			<artifactId>RevassessDemo</artifactId>
+			<groupId>com.revature</groupId>
+			<artifactId>Revassess</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<classifier>tests</classifier>
 			<scope>system</scope>
-			<systemPath>${basedir}/src/assets/RevAssessDemo-0.0.1-SNAPSHOT-tests.jar</systemPath>
+			<systemPath>${basedir}/src/assets/RevAssess-jar-with-dependencies.jar</systemPath>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-runner -->
 		<dependency>

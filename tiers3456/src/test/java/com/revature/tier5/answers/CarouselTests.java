@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.revature.assessors.RevAssess;
+import com.revature.assessors.RevaTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.By;
@@ -15,9 +17,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import dev.ranieri.assesors.RevAssess;
-import dev.ranieri.assesors.RevaTest;
-import junit.framework.AssertionFailedError;
 
 import static org.junit.jupiter.api.Assertions.*;
 

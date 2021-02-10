@@ -3,13 +3,13 @@ package com.revature.tier3.answers;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
+import com.revature.assessors.RevAssess;
+import com.revature.assessors.RevaTest;
 import org.hibernate.Session;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import com.revature.config.TestConfig;
 
-import dev.ranieri.assesors.RevAssess;
-import dev.ranieri.assesors.RevaTest;
 
 /**
  * prompt: Add an AWS RDS Instance jdbc url and credentials to the configuration

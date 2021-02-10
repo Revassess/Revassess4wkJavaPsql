@@ -1,16 +1,14 @@
 package com.revature.tier3.answers;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.fail;
-
+import com.revature.assessors.RevAssess;
+import com.revature.assessors.RevaTest;
+import com.revature.config.TestConfig;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import com.revature.config.TestConfig;
-
-import dev.ranieri.assesors.RevAssess;
-import dev.ranieri.assesors.RevaTest;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.fail;
 
 /**
  * prompt: Create a table structure using the provided ERD, ensure that the

@@ -8,10 +8,10 @@ import java.util.List;
 import java.util.regex.Matcher;
 
 
+import com.revature.assessors.RevAssess;
+import com.revature.assessors.RevaTest;
 import com.revature.tier2.config.TestConfiguration;
 import com.revature.tier2.model.Flashcard;
-import dev.ranieri.assesors.RevAssess;
-import dev.ranieri.assesors.RevaTest;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;

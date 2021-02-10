@@ -13,9 +13,9 @@
     <orderEntry type="library" name="Maven: org.junit.platform:junit-platform-commons:1.7.0" level="project" />
     <orderEntry type="library" name="Maven: org.apiguardian:apiguardian-api:1.1.0" level="project" />
     <orderEntry type="module-library">
-      <library name="Maven: dev.ranieri:RevassessDemo:tests:0.0.1-SNAPSHOT">
+      <library name="Maven: com.revature:Revassess:tests:0.0.1-SNAPSHOT">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/src/assets/RevAssessDemo-0.0.1-SNAPSHOT-tests.jar!/" />
+          <root url="jar://$MODULE_DIR$/src/assets/RevAssess-jar-with-dependencies.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

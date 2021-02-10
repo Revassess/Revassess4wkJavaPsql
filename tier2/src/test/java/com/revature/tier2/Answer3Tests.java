@@ -1,9 +1,9 @@
 package com.revature.tier2;
 
+import com.revature.assessors.RevAssess;
+import com.revature.assessors.RevaTest;
 import com.revature.tier2.config.TestConfiguration;
 import com.revature.tier2.model.UserStudySet;
-import dev.ranieri.assesors.RevAssess;
-import dev.ranieri.assesors.RevaTest;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.junit.jupiter.api.BeforeEach;

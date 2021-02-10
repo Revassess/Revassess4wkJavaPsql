@@ -7,10 +7,10 @@ import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.List;
 
+import com.revature.assessors.RevAssess;
+import com.revature.assessors.RevaTest;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import dev.ranieri.assesors.RevAssess;
-import dev.ranieri.assesors.RevaTest;
 
 
 /**

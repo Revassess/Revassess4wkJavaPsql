@@ -1,21 +1,17 @@
 package com.revature.tier4.answers;
 
+import com.revature.assessors.RevAssess;
+import com.revature.assessors.RevaTest;
 import com.revature.config.ConnectionUtil;
 import com.revature.dao.CrudRepository;
 import com.revature.dao.UserRepository;
 import com.revature.model.User;
-import dev.ranieri.assesors.RevAssess;
-import dev.ranieri.assesors.RevaTest;
-import org.hibernate.Filter;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
-import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
